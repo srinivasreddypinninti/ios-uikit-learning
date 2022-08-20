@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol LoginViewControllerDelegate: AnyObject {
+    func didLogin()
+}
+
 class LoginViewController: UIViewController {
 
     let stackView = UIStackView()
@@ -24,10 +28,18 @@ class LoginViewController: UIViewController {
         return loginView.passwordTextField.text
     }
     
+    
+    weak var delegate: LoginViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         style()
         layout()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        signInButton.configuration?.showsActivityIndicator = false
     }
 }
 
@@ -133,13 +145,14 @@ extension LoginViewController {
             return
         }
         
-        if userName.isEmpty || password.isEmpty {
-            configureView(withMessage: "Username/Password can't be blank")
-            return
-        }
+//        if userName.isEmpty || password.isEmpty {
+//            configureView(withMessage: "Username/Password can't be blank")
+//            return
+//        }
         
-        if userName == "Kevin" && password == "welcome" {
+        if userName == "" && password == "" {
             signInButton.configuration?.showsActivityIndicator = true
+            delegate?.didLogin()
         } else {
             configureView(withMessage: "Username/Password incorrect")
         }
