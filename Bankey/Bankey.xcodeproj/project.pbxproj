@@ -13,6 +13,7 @@
 		F3AB3EBE28AA6C7A00FA5C7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3AB3EBD28AA6C7A00FA5C7C /* Assets.xcassets */; };
 		F3AB3EC128AA6C7A00FA5C7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3AB3EBF28AA6C7A00FA5C7C /* LaunchScreen.storyboard */; };
 		F3AB3EC928AA6DA400FA5C7C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AB3EC828AA6DA400FA5C7C /* LoginView.swift */; };
+		F3AEA2AE28B238AF00DAB82B /* AccountSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AEA2AD28B238AF00DAB82B /* AccountSummaryViewController.swift */; };
 		F3B0CD5428B0A520008EB4AE /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B0CD5328B0A520008EB4AE /* LocalState.swift */; };
 		F3BAFDB228AB312E00D4C3F8 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BAFDB128AB312E00D4C3F8 /* OnboardingContainerViewController.swift */; };
 		F3BAFDB428AB419900D4C3F8 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BAFDB328AB419900D4C3F8 /* OnboardingViewController.swift */; };
@@ -30,6 +31,7 @@
 		F3AB3EC028AA6C7A00FA5C7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3AB3EC228AA6C7A00FA5C7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3AB3EC828AA6DA400FA5C7C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		F3AEA2AD28B238AF00DAB82B /* AccountSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewController.swift; sourceTree = "<group>"; };
 		F3B0CD5328B0A520008EB4AE /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
 		F3BAFDB128AB312E00D4C3F8 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		F3BAFDB328AB419900D4C3F8 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -76,7 +78,9 @@
 		F3AB3EB328AA6C7900FA5C7C /* Bankey */ = {
 			isa = PBXGroup;
 			children = (
+				F3AEA2AC28B2388000DAB82B /* account summary */,
 				F3AB3EB428AA6C7900FA5C7C /* AppDelegate.swift */,
+				F3D67C5728B20D36002F6119 /* MainViewController.swift */,
 				F3A7B06A28AF204F006FCE1A /* delegate protocal */,
 				F3BAFDAF28AB30F000D4C3F8 /* login */,
 				F3BAFDB028AB30FC00D4C3F8 /* onboarding */,
@@ -84,9 +88,16 @@
 				F3AB3EBD28AA6C7A00FA5C7C /* Assets.xcassets */,
 				F3AB3EBF28AA6C7A00FA5C7C /* LaunchScreen.storyboard */,
 				F3AB3EC228AA6C7A00FA5C7C /* Info.plist */,
-				F3D67C5728B20D36002F6119 /* MainViewController.swift */,
 			);
 			path = Bankey;
+			sourceTree = "<group>";
+		};
+		F3AEA2AC28B2388000DAB82B /* account summary */ = {
+			isa = PBXGroup;
+			children = (
+				F3AEA2AD28B238AF00DAB82B /* AccountSummaryViewController.swift */,
+			);
+			path = "account summary";
 			sourceTree = "<group>";
 		};
 		F3B0CD5228B0A502008EB4AE /* utils */ = {
@@ -195,6 +206,7 @@
 				F3BAFDB428AB419900D4C3F8 /* OnboardingViewController.swift in Sources */,
 				F3AB3EB528AA6C7900FA5C7C /* AppDelegate.swift in Sources */,
 				F3BAFDB228AB312E00D4C3F8 /* OnboardingContainerViewController.swift in Sources */,
+				F3AEA2AE28B238AF00DAB82B /* AccountSummaryViewController.swift in Sources */,
 				F3B0CD5428B0A520008EB4AE /* LocalState.swift in Sources */,
 				F3D67C5828B20D36002F6119 /* MainViewController.swift in Sources */,
 			);
