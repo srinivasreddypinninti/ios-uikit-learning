@@ -17,6 +17,8 @@
 		F3BAFDB228AB312E00D4C3F8 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BAFDB128AB312E00D4C3F8 /* OnboardingContainerViewController.swift */; };
 		F3BAFDB428AB419900D4C3F8 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BAFDB328AB419900D4C3F8 /* OnboardingViewController.swift */; };
 		F3BBADD628B0963300AD8468 /* DummyLogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BBADD528B0963300AD8468 /* DummyLogoutViewController.swift */; };
+		F3D67C5628B2074C002F6119 /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D67C5528B2074C002F6119 /* UIViewController+Utils.swift */; };
+		F3D67C5828B20D36002F6119 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D67C5728B20D36002F6119 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		F3BAFDB128AB312E00D4C3F8 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		F3BAFDB328AB419900D4C3F8 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		F3BBADD528B0963300AD8468 /* DummyLogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyLogoutViewController.swift; sourceTree = "<group>"; };
+		F3D67C5528B2074C002F6119 /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
+		F3D67C5728B20D36002F6119 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,14 +76,15 @@
 		F3AB3EB328AA6C7900FA5C7C /* Bankey */ = {
 			isa = PBXGroup;
 			children = (
-				F3B0CD5228B0A502008EB4AE /* utils */,
-				F3A7B06A28AF204F006FCE1A /* delegate protocal */,
-				F3BAFDB028AB30FC00D4C3F8 /* onboarding */,
-				F3BAFDAF28AB30F000D4C3F8 /* login */,
 				F3AB3EB428AA6C7900FA5C7C /* AppDelegate.swift */,
+				F3A7B06A28AF204F006FCE1A /* delegate protocal */,
+				F3BAFDAF28AB30F000D4C3F8 /* login */,
+				F3BAFDB028AB30FC00D4C3F8 /* onboarding */,
+				F3B0CD5228B0A502008EB4AE /* utils */,
 				F3AB3EBD28AA6C7A00FA5C7C /* Assets.xcassets */,
 				F3AB3EBF28AA6C7A00FA5C7C /* LaunchScreen.storyboard */,
 				F3AB3EC228AA6C7A00FA5C7C /* Info.plist */,
+				F3D67C5728B20D36002F6119 /* MainViewController.swift */,
 			);
 			path = Bankey;
 			sourceTree = "<group>";
@@ -88,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				F3B0CD5328B0A520008EB4AE /* LocalState.swift */,
+				F3D67C5528B2074C002F6119 /* UIViewController+Utils.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -183,12 +189,14 @@
 			files = (
 				F3BBADD628B0963300AD8468 /* DummyLogoutViewController.swift in Sources */,
 				F3A7B06C28AF206C006FCE1A /* ViewController.swift in Sources */,
+				F3D67C5628B2074C002F6119 /* UIViewController+Utils.swift in Sources */,
 				F3AB3EC928AA6DA400FA5C7C /* LoginView.swift in Sources */,
 				F3AB3EB928AA6C7900FA5C7C /* LoginViewController.swift in Sources */,
 				F3BAFDB428AB419900D4C3F8 /* OnboardingViewController.swift in Sources */,
 				F3AB3EB528AA6C7900FA5C7C /* AppDelegate.swift in Sources */,
 				F3BAFDB228AB312E00D4C3F8 /* OnboardingContainerViewController.swift in Sources */,
 				F3B0CD5428B0A520008EB4AE /* LocalState.swift in Sources */,
+				F3D67C5828B20D36002F6119 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,8 @@
 
 import UIKit
 
+let appColor: UIColor = .systemTeal
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let loginViewController = LoginViewController()
     let onboardingController = OnboardingContainerViewController()
     let dummyVc = DummyLogoutViewController()
+    let mainVC = MainViewController()
         
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
@@ -27,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          onboardingController.delegate = self
         dummyVc.delegate = self
         
-         window?.rootViewController = loginViewController
+         window?.rootViewController = mainVC
                 
         return true
     }
