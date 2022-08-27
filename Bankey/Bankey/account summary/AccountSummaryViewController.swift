@@ -33,6 +33,10 @@ class AccountSummaryViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
+        tableView.register(AccountSummaryCell.self, forCellReuseIdentifier: AccountSummaryCell.reuseId)
+        tableView.rowHeight = AccountSummaryCell.rowHeigth
+//        tableView.tableFooterView = UIView()
+        
         
     }
     
@@ -56,8 +60,10 @@ extension AccountSummaryViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = games[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: AccountSummaryCell.reuseId, for: indexPath) as? AccountSummaryCell else {
+            fatalError("dequeueReusableCell failed ")
+        }
+//        cell.typeLabel.text = games[indexPath.row]
         return cell
     }
 }
