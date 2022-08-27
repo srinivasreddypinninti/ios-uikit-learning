@@ -2,63 +2,59 @@
 //  AccountSummaryViewController.swift
 //  Bankey
 //
-//  Created by srinivas on 21/08/22.
+//  Created by srinivas on 27/08/22.
 //
 
-import Foundation
 import UIKit
 
 class AccountSummaryViewController: UIViewController {
     
-    let data = ["One", "Two", "Three"]
+    let games:[String] = ["Cricket", "VollyBall", "Football", "Tennis"]
     
     let tableView = UITableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
-    }
-}
-
-extension AccountSummaryViewController {
-    
-    func setup() {
+        view.backgroundColor = .systemOrange
         setupTableView()
     }
     
     private func setupTableView() {
-        tableView.dataSource = self
-        tableView.delegate = self
-        
-        tableView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tableView)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
+        
+        tableView.dataSource = self
+        tableView.delegate = self
     }
 }
 
-//Datasource
+// MARK: - Datasource
 extension AccountSummaryViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        data.count
+        games.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = data[indexPath.row]
+        cell.textLabel?.text = games[indexPath.row]
         return cell
     }
 }
 
-// Delegate
+// MARK: - Delegate
+
 extension AccountSummaryViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        //
     }
+    
 }

@@ -2,56 +2,81 @@
 //  MainViewController.swift
 //  Bankey
 //
-//  Created by srinivas on 21/08/22.
+//  Created by srinivas on 25/08/22.
 //
 
-import Foundation
 import UIKit
 
 class MainViewController: UITabBarController {
     
+    
     override func viewDidLoad() {
+        super.viewDidLoad()
         setupViews()
-        setupTabBar()
     }
     
-    func setupViews() {
-        let summaryVC = AccountSummaryViewController()
-        let moneyVC = MoneyMoveVC()
+    private func setupViews() {
+        
+        let summaryVC = SummaryVC()
+        let moneyVC = MoneyVC()
         let moreVC = MoreVC()
         
-        summaryVC.setTabBarImage(imageName: "list.dash.header.rectangle", title: "Summary")
-        moneyVC.setTabBarImage(imageName: "arrow.left.arrow.right", title: "Move Money")
-        moreVC.setTabBarImage(imageName: "ellipsis.circle", title: "More")
+        summaryVC.tabarImage(systemImage: "list.dash.header.rectangle", tabName: "Summary")
+        moneyVC.tabarImage(systemImage: "arrow.left.arrow.right", tabName: "Money")
+        moreVC.tabarImage(systemImage: "ellipsis.circle", tabName: "More")
         
-        let nc1 = UINavigationController(rootViewController: summaryVC)
-        let nc2 = UINavigationController(rootViewController: moneyVC)
-        let nc3 = UINavigationController(rootViewController: moreVC)
+//        summaryVC.tabBarItem = UITabBarItem(tabBarSystemItem: "", tag: 0)
+//        moneyVC.tabBarItem = UITabBarItem(tabBarSystemItem: "", tag: 1)
+//        moreVC.tabBarItem = UITabBarItem(tabBarSystemItem: "", tag: 2)
         
-        nc1.navigationBar.barTintColor = appColor
-        hideNavigationBarLine(nc1.navigationBar)
+        let summaryNC = UINavigationController(rootViewController: summaryVC)
+        let moneyNC = UINavigationController(rootViewController: moneyVC)
+        let moreNC = UINavigationController(rootViewController: moreVC)
         
-        let tabBarItems = [nc1, nc2, nc3]
-        viewControllers = tabBarItems
-    }
-    
-    private func hideNavigationBarLine(_ navigationBar: UINavigationBar) {
-        let image = UIImage()
-        navigationBar.shadowImage = image
-        navigationBar.setBackgroundImage(image, for: .default)
-        navigationBar.isTranslucent = false
-    }
-    
-    func setupTabBar() {
+        let tabs = [summaryNC, moneyNC, moreNC]
+        
+//        let tabBarController = UITabBarController()
+//        tabBarController.setViewControllers(tabs, animated: true)
+        
+        summaryNC.navigationBar.barTintColor = appColor
+        hideNavBarLine(summaryNC.navigationBar)
+        
+        viewControllers = tabs
+        
         tabBar.tintColor = appColor
         tabBar.isTranslucent = false
+        
     }
+    
+    
+    private func hideNavBarLine(_ nav: UINavigationBar) {
+        let dummyImage = UIImage()
+        nav.shadowImage = dummyImage
+        nav.setBackgroundImage(dummyImage, for: .default)
+        nav.isTranslucent = false
+    }
+    
+    
 }
 
 
+class SummaryVC: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .systemRed
+    }
+}
 
+class MoneyVC: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .systemYellow
+    }
+}
 
-class  MoneyMoveVC: UIViewController {
+class MoreVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,10 +84,13 @@ class  MoneyMoveVC: UIViewController {
     }
 }
 
-class  MoreVC: UIViewController {
+extension UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemYellow
+    func tabarImage(systemImage: String, tabName: String) {
+        let config = UIImage.SymbolConfiguration(scale: .large)
+        let image = UIImage(systemName: systemImage, withConfiguration: config)
+        tabBarItem = UITabBarItem(title: tabName, image: image, tag: 0)
+        
     }
+    
 }
