@@ -15,8 +15,8 @@ class AccountSummaryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemOrange
         setupTableView()
+        setupTableHeaderView()
     }
     
     private func setupTableView() {
@@ -32,6 +32,19 @@ class AccountSummaryViewController: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
+        
+        
+    }
+    
+    private func setupTableHeaderView() {
+        
+        let header = AccountSummaryHeaderView(frame: .zero)
+        var size = header.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+        size.width = UIScreen.main.bounds.width
+        header.frame.size = size
+        
+        tableView.tableHeaderView = header
+        
     }
 }
 

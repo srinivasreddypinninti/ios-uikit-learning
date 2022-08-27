@@ -22,6 +22,8 @@
 		F3BAFDB428AB419900D4C3F8 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BAFDB328AB419900D4C3F8 /* OnboardingViewController.swift */; };
 		F3BBADD628B0963300AD8468 /* DummyLogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BBADD528B0963300AD8468 /* DummyLogoutViewController.swift */; };
 		F3BC78C228B9ED9700921C13 /* AccountSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BC78C128B9ED9700921C13 /* AccountSummaryViewController.swift */; };
+		F3BC78C428B9F17900921C13 /* AccountSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BC78C328B9F17900921C13 /* AccountSummaryHeaderView.swift */; };
+		F3BC78C628B9F18D00921C13 /* AccountSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3BC78C528B9F18D00921C13 /* AccountSummaryHeaderView.xib */; };
 		F3D67C5628B2074C002F6119 /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D67C5528B2074C002F6119 /* UIViewController+Utils.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,8 @@
 		F3BAFDB328AB419900D4C3F8 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		F3BBADD528B0963300AD8468 /* DummyLogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyLogoutViewController.swift; sourceTree = "<group>"; };
 		F3BC78C128B9ED9700921C13 /* AccountSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewController.swift; sourceTree = "<group>"; };
+		F3BC78C328B9F17900921C13 /* AccountSummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryHeaderView.swift; sourceTree = "<group>"; };
+		F3BC78C528B9F18D00921C13 /* AccountSummaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSummaryHeaderView.xib; sourceTree = "<group>"; };
 		F3D67C5528B2074C002F6119 /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,6 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				F3BC78C128B9ED9700921C13 /* AccountSummaryViewController.swift */,
+				F3BC78C328B9F17900921C13 /* AccountSummaryHeaderView.swift */,
+				F3BC78C528B9F18D00921C13 /* AccountSummaryHeaderView.xib */,
 			);
 			path = "account summary";
 			sourceTree = "<group>";
@@ -203,6 +209,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3BC78C628B9F18D00921C13 /* AccountSummaryHeaderView.xib in Resources */,
 				F3AB3EC128AA6C7A00FA5C7C /* LaunchScreen.storyboard in Resources */,
 				F3AB3EBE28AA6C7A00FA5C7C /* Assets.xcassets in Resources */,
 			);
@@ -215,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3BC78C428B9F17900921C13 /* AccountSummaryHeaderView.swift in Sources */,
 				F3BBADD628B0963300AD8468 /* DummyLogoutViewController.swift in Sources */,
 				F3B8D4F628B7D27F00052814 /* MainViewController.swift in Sources */,
 				F3A7B06C28AF206C006FCE1A /* ViewController.swift in Sources */,
