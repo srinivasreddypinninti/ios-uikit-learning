@@ -11,13 +11,18 @@ class AccountSummaryCell: UITableViewCell {
     
     enum AccountType: String {
         case Banking
-        case CrediCard
+        case CreditCard
         case Investment
     }
     
     struct ViewModel {
         let accountType: AccountType
         let accountName: String
+        let balance: Decimal
+        
+        var balanceAttributedString: NSAttributedString {
+            return CurrencyFormatter().makeAttributedCurrency(balance)
+        }
     }
     
     static let reuseId = "reuseIdentifier"
@@ -65,7 +70,7 @@ class AccountSummaryCell: UITableViewCell {
         balanceLabel.textAlignment = .right
         
         balanceAmountLabel.translatesAutoresizingMaskIntoConstraints = false
-        balanceAmountLabel.attributedText = makeFormattedBalance(dollars: "929,466", cents: "23")
+        balanceAmountLabel.attributedText = makeFormattedBalance(dollars: "XXX,XXX", cents: "XX")
 //        balanceAmountLabel.font = UIFont.preferredFont(forTextStyle: .body)
         balanceAmountLabel.textAlignment = .right
         
@@ -134,12 +139,13 @@ extension AccountSummaryCell {
     func configure(_ vm: ViewModel) {
         typeLabel.text = vm.accountType.rawValue
         nameLabel.text = vm.accountName
+        balanceAmountLabel.attributedText = vm.balanceAttributedString
         switch vm.accountType {
             case .Banking:
                 underlineView.backgroundColor = appColor
                 balanceLabel.text = "Current balance"
                 break
-            case .CrediCard:
+            case .CreditCard:
                 underlineView.backgroundColor = .systemOrange
                 balanceLabel.text = "Current balance"
                 break

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F3A7B06C28AF206C006FCE1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A7B06B28AF206C006FCE1A /* ViewController.swift */; };
+		F3A7C3AF28BB14C2006ECA02 /* DecimalUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A7C3AE28BB14C2006ECA02 /* DecimalUtil.swift */; };
+		F3A7C3B128BB151F006ECA02 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A7C3B028BB151F006ECA02 /* CurrencyFormatter.swift */; };
 		F3AB3EB528AA6C7900FA5C7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AB3EB428AA6C7900FA5C7C /* AppDelegate.swift */; };
 		F3AB3EB928AA6C7900FA5C7C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AB3EB828AA6C7900FA5C7C /* LoginViewController.swift */; };
 		F3AB3EBE28AA6C7A00FA5C7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3AB3EBD28AA6C7A00FA5C7C /* Assets.xcassets */; };
@@ -30,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		F3A7B06B28AF206C006FCE1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F3A7C3AE28BB14C2006ECA02 /* DecimalUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalUtil.swift; sourceTree = "<group>"; };
+		F3A7C3B028BB151F006ECA02 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
 		F3AB3EB128AA6C7900FA5C7C /* Bankey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bankey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3AB3EB428AA6C7900FA5C7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3AB3EB828AA6C7900FA5C7C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -109,7 +113,9 @@
 			isa = PBXGroup;
 			children = (
 				F3B0CD5328B0A520008EB4AE /* LocalState.swift */,
+				F3A7C3AE28BB14C2006ECA02 /* DecimalUtil.swift */,
 				F3D67C5528B2074C002F6119 /* UIViewController+Utils.swift */,
+				F3A7C3B028BB151F006ECA02 /* CurrencyFormatter.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -248,6 +254,7 @@
 				F3D67C5628B2074C002F6119 /* UIViewController+Utils.swift in Sources */,
 				F3AB3EC928AA6DA400FA5C7C /* LoginView.swift in Sources */,
 				F3AB3EB928AA6C7900FA5C7C /* LoginViewController.swift in Sources */,
+				F3A7C3B128BB151F006ECA02 /* CurrencyFormatter.swift in Sources */,
 				F3BAFDB428AB419900D4C3F8 /* OnboardingViewController.swift in Sources */,
 				F3BC78C228B9ED9700921C13 /* AccountSummaryViewController.swift in Sources */,
 				F3AB3EB528AA6C7900FA5C7C /* AppDelegate.swift in Sources */,
@@ -255,6 +262,7 @@
 				F3BA9C3B28B46F1E00EEA1F7 /* MyStackView.swift in Sources */,
 				F3BA9C3D28B46F8100EEA1F7 /* MyViewController.swift in Sources */,
 				F3BA9A1A28B4964200999FE4 /* StackCell.swift in Sources */,
+				F3A7C3AF28BB14C2006ECA02 /* DecimalUtil.swift in Sources */,
 				F3CCCC6728BA63FD00053BB0 /* AccountSummaryCell.swift in Sources */,
 				F3B0CD5428B0A520008EB4AE /* LocalState.swift in Sources */,
 			);
