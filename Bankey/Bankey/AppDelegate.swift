@@ -31,6 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        window?.rootViewController = vc
         
         displayLogin()
+        registerLogoutNotification()
         return true
     }
     
@@ -51,6 +52,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        mainViewController.setStatusBar()
        UINavigationBar.appearance().isTranslucent = false
        UINavigationBar.appearance().backgroundColor = appColor
+    }
+    
+    private func registerLogoutNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(didLogoutTapped), name: .logout, object: nil)
     }
 }
 
@@ -93,6 +98,13 @@ extension AppDelegate: DummyLogoutViewControllerDelegate {
     
     func didLogout() {
         debugPrint("didLogout...")
+        setRootViewController(loginViewController)
+    }
+}
+
+extension AppDelegate {
+   @objc func didLogoutTapped() {
+        debugPrint("didLogoutTapped...")
         setRootViewController(loginViewController)
     }
 }
